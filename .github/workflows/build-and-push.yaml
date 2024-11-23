@@ -16,7 +16,7 @@ permissions:
   contents: read
 
 jobs:
-  check:
+  build-and-push:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4

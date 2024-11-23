@@ -45,7 +45,7 @@
         docker = pkgs.dockerTools.buildLayeredImage {
           name = "ghcr.io/ankarhem/nix-docker-remix";
           tag = "latest";
-          contents = with pkgs; [nodejs];
+          contents = [remix pkgs.nodejs];
           config.Cmd = "npx remix-serve ${remix}/build/server/index.js";
         };
       };
