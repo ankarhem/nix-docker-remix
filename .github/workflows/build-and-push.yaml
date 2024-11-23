@@ -10,17 +10,14 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 permissions:
-  id-token: "write"
+  id-token: write
   packages: write
   attestations: write
-  contents: "read"
+  contents: read
 
 jobs:
   check:
     runs-on: ubuntu-22.04
-    permissions:
-      contents: read
-      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
